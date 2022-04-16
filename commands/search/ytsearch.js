@@ -6,7 +6,7 @@ module.exports = {
     desc: "Search Video From YouTube",
     type: "search",
     example: "Example : %prefix%command Muse Indonesia",
-    exec: async(killua, m, { command, text, toUpper }) => {
+    exec: async(dinxyz, m, { command, text, toUpper }) => {
         global.mess("wait", m)
         let fetch = await fetchUrl(global.api("zenz", "/searching/ytsearch", { query: text }, "apikey"))
         if (fetch.result.length == 0) return global.mess("error", m)
@@ -24,7 +24,7 @@ module.exports = {
             caption += `⭔ Author : ${i.author.name}\n`
             caption += `\n─────────────────\n\n`
         }
-        killua.sendFile(m.from, result[0].thumbnail, "", m, { caption })
+        dinxyz.sendFile(m.from, result[0].thumbnail, "", m, { caption })
     },
     isQuery: true
 }

@@ -6,7 +6,7 @@ module.exports = {
     desc: "Search story From webtoons",
     type: "webzone",
     example: `Example : %prefix%command love`,
-    exec: async(killua, m, { text, command, prefix, toUpper }) => {
+    exec: async(dinxyz, m, { text, command, prefix, toUpper }) => {
         global.mess("wait", m)
         let fetch = await fetchUrl(global.api("zenz", "/webzone/webtoons", { query: text }, "apikey"))
         if (fetch.result.length == 0) return global.mess("error", m)
@@ -19,7 +19,7 @@ module.exports = {
             caption += `⭔ Thumbnail : ${i.thumbnail}\n`
             caption += `⭔ Url : ${i.url}\n\n`
         }
-        killua.sendText(m.from, caption, m)
+        dinxyz.sendText(m.from, caption, m)
     },
     isQuery: true
 }

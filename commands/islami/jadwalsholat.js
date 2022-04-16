@@ -6,7 +6,7 @@ module.exports = {
     desc: "Get Detail Jadwal Sholat With City",
     type: "islami",
     example: "Example : %prefix%command Jakarta-Selatan",
-    exec: async(killua, m, { text, command, prefix, toUpper }) => {
+    exec: async(dinxyz, m, { text, command, prefix, toUpper }) => {
         global.mess("wait", m)
         let fetch = await fetchUrl(global.api("zenz", "/islami/jadwalshalat", { kota: text }, "apikey"))
         if (fetch.result.length == 0) return global.mess("error", m)
@@ -20,7 +20,7 @@ module.exports = {
             teks += `⭔ Maghrib : ${i.maghrib}\n`
             teks += `⭔ Isya : ${i.isya}`
         }
-        killua.sendText(m.from, teks, m)
+        dinxyz.sendText(m.from, teks, m)
     },
     isQuery: true
 }

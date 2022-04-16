@@ -6,7 +6,7 @@ module.exports = {
     desc: "Search community from amino",
     type: "webzone",
     example: `Example : %prefix%command mlbb`,
-    exec: async(killua, m, { text, command, prefix, toUpper }) => {
+    exec: async(dinxyz, m, { text, command, prefix, toUpper }) => {
         global.mess("wait", m)
         let fetch = await fetchUrl(global.api("zenz", "/webzone/amino", { query: text }, "apikey"))
         if (fetch.result.length == 0) return global.mess("error", m)
@@ -17,7 +17,7 @@ module.exports = {
             caption += `⭔ Community Link : ${i.community_link}\n`
             caption += `⭔ Community Thumb : ${i.community_thumb}\n\n`
         }
-        killua.sendText(m.from, caption, m)
+        dinxyz.sendText(m.from, caption, m)
     },
     isQuery: true
 }

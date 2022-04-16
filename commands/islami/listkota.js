@@ -5,7 +5,7 @@ module.exports = {
     alias: ["kota"],
     desc: "List Of Cities throughout Indonesia",
     type: "islami",
-    exec: async(killua, m) => {
+    exec: async(dinxyz, m) => {
         global.mess("wait", m)
         let fetch = await fetchUrl(global.api("zenz", "/islami/listkota", {}, "apikey"))
         if (fetch.result.length == 0) return global.mess("error", m)
@@ -15,6 +15,6 @@ module.exports = {
             teks += `⭔ Kota : \n${i.kota.join("\n")}\n`
             teks += `\n`
         }
-        killua.sendText(m.from, teks, m)
+        dinxyz.sendText(m.from, teks, m)
     }
 }

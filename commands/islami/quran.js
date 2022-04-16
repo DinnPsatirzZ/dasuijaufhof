@@ -5,7 +5,7 @@ module.exports = {
     alias: ["listsurah","surah","ayat"],
     desc: `List Surah Of All Quran`,
     type: "islami",
-    exec: async(killua, m, { text, args, prefix, command }) => {
+    exec: async(dinxyz, m, { text, args, prefix, command }) => {
         let [a, b, c, d] = args
         if (a.toLowerCase() === "list") {
             let fetch = await fetchUrl(global.api("zenz", "/islami/quran", {}, "apikey"))
@@ -13,7 +13,7 @@ module.exports = {
             for (let v in fetch.result) {
                 teks += `${v}. ${fetch.result[v]}\n`
             }
-            killua.sendText(m.from, teks, m)
+            dinxyz.sendText(m.from, teks, m)
         } else if (a.toLowerCase() == "surah") {
             let fetch = await fetchUrl(global.api("zenz", `/islami/quran/${b}`, {}, "apikey"))
             let { name, revelation, tafsir, verses, number, sequence, numberOfVerses } = fetch.result
@@ -33,8 +33,8 @@ ${i.text.arab}
 - ${i.translation.id}
 `
             }
-            killua.sendText(m.from, teks, m)
-            if (c && c.toLowerCase() == "--audio") killua.sendFile(m.from, global.api("zenz", `/islami/quran/audio/${b}`, {}, "apikey"), name.long, m)
+            dinxyz.sendText(m.from, teks, m)
+            if (c && c.toLowerCase() == "--audio") dinxyz.sendFile(m.from, global.api("zenz", `/islami/quran/audio/${b}`, {}, "apikey"), name.long, m)
         } else if (a.toLowerCase() == "ayat") {
             let fetch = await fetchUrl(global.api("zenz", `/islami/quran/${b}/${c}`, {}, "apikey"))
             let { number, meta, text, translation, audio, tafsir, surah } = fetch.result
@@ -48,8 +48,8 @@ ${i.text.arab}
 - ${translation.id}\n
 ⭔ Tafsir : ${tafsir.id.long}           
             `
-            killua.sendText(m.from, teks, m)
-            if (d && d.toLowerCase() == "--audio") killua.sendFile(m.from, global.api("zenz", `/islami/quran/audio/${b}/${c}`, {}, "apikey"), surah.name.long, m)
+            dinxyz.sendText(m.from, teks, m)
+            if (d && d.toLowerCase() == "--audio") dinxyz.sendFile(m.from, global.api("zenz", `/islami/quran/audio/${b}/${c}`, {}, "apikey"), surah.name.long, m)
         } else {
             return m.reply(`
 Example :

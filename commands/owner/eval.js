@@ -7,7 +7,7 @@ module.exports = {
     alias: [">",">>","=>"],
     desc: "Running JavaScript Code via Command",
     type: "owner",
-    exec: async (killua, m, opt) => {
+    exec: async (dinxyz, m, opt) => {
         let evaled
         let { text } = opt
         try {
@@ -17,9 +17,9 @@ module.exports = {
             }
             evaled = await eval(text)
             if (typeof evaled !== "string") evaled = require("util").inspect(evaled)
-            await killua.sendMessage(m.from, { text: evaled }, { quoted: m })
+            await dinxyz.sendMessage(m.from, { text: evaled }, { quoted: m })
         } catch (e) {
-            killua.sendMessage(m.from, { text: String(e) }, { quoted: m })
+            dinxyz.sendMessage(m.from, { text: String(e) }, { quoted: m })
         }
     },
     isOwner: true

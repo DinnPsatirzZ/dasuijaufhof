@@ -3,7 +3,7 @@ module.exports = {
     alias: ["help","?"],
     desc: "List all command",
     type: "main",
-    exec: async(killua, m, { commands, args, prefix, text, toUpper }) => {
+    exec: async(dinxyz, m, { commands, args, prefix, text, toUpper }) => {
         if (args[0]) {
             let data = []
             let name = args[0].toLowerCase()
@@ -35,7 +35,7 @@ module.exports = {
                 buttons: buttons,
                 headerType: 4
             }
-            killua.sendMessage(m.from, buttonMessage, { quoted: m })
+            dinxyz.sendMessage(m.from, buttonMessage, { quoted: m })
         }
     }
 }

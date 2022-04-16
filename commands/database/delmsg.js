@@ -4,7 +4,7 @@ module.exports = {
     desc: "delete message from database",
     type: "database",
     example: "send command %prefix%command <name>",
-    exec: async(killua, m, { prefix, command, text }) => {
+    exec: async(dinxyz, m, { prefix, command, text }) => {
         let which = command.replace(/get/i, '')
         let databse = global.db.databse
         if (!(text.toLowerCase() in databse)) return m.reply(`"${text}" not saved in the database`)

@@ -5,8 +5,8 @@ module.exports = {
     alias: ["pin"],
     desc: "Search Image from Pinterest",
     type: "search",
-    example: "Example : %prefix%command killua",
-    exec: async(killua, m, { text, command, toUpper }) => {
+    example: "Example : %prefix%command dinxyz",
+    exec: async(dinxyz, m, { text, command, toUpper }) => {
         global.mess("wait", m)
         let fetch = await fetchUrl(global.api("zenz", "/searching/pinterest", { query: text }, "apikey"))
         let random = fetch.result[Math.floor(Math.random() * fetch.result.length)]
@@ -20,7 +20,7 @@ module.exports = {
             buttons: buttons,
             headerType: 4
         }
-        killua.sendMessage(m.from, buttonMessage, { quoted: m })
+        dinxyz.sendMessage(m.from, buttonMessage, { quoted: m })
     },
     isQuery: true
 }

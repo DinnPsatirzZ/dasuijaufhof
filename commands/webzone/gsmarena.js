@@ -6,7 +6,7 @@ module.exports = {
     desc: "Search Phone spec From Gsmarena",
     type: "webzone",
     example: `Example : %prefix%command Poco X3`,
-    exec: async(killua, m, { text, command, prefix, toUpper }) => {
+    exec: async(dinxyz, m, { text, command, prefix, toUpper }) => {
         global.mess("wait", m)
         let fetch = await fetchUrl(global.api("zenz", "/webzone/gsmarena", { query: text }, "apikey"))
         if (fetch.result.length == 0) return global.mess("error", m)
@@ -25,7 +25,7 @@ module.exports = {
         caption += `⭔ Battery : ${fetch.result.batrai}\n`
         caption += `⭔ Merek Battery : ${fetch.result.merek_batre}\n\n`
         caption += `⭔ Detail : ${fetch.result.detail}\n`
-        killua.sendFile(m.from, fetch.result.thumb, "", m, { caption })
+        dinxyz.sendFile(m.from, fetch.result.thumb, "", m, { caption })
     },
     isQuery: true
 }

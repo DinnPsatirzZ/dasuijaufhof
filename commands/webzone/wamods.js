@@ -6,7 +6,7 @@ module.exports = {
     desc: "Search WhatsApp Mod Apk",
     type: "webzone",
     example: `Example : %prefix%command gbwa`,
-    exec: async(killua, m, { text, command, prefix, toUpper }) => {
+    exec: async(dinxyz, m, { text, command, prefix, toUpper }) => {
         global.mess("wait", m)
         let fetch = await fetchUrl(global.api("zenz", "/webzone/wamods", { query: text }, "apikey"))
         if (fetch.result.length == 0) return global.mess("error", m)
@@ -16,7 +16,7 @@ module.exports = {
             caption += `⭔ Apk Url : ${i.apk_url}\n`
             caption += `⭔ Apk Desc : ${i.apk_desc}\n\n`
         }
-        killua.sendFile(m.from, fetch.result[0].apk_image, "", m, { caption })
+        dinxyz.sendFile(m.from, fetch.result[0].apk_image, "", m, { caption })
     },
     isQuery: true
 }

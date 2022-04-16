@@ -4,7 +4,7 @@ module.exports = {
     desc: "Add Command With Media To Database",
     type: "database",
     example: "Reply Media With Command %prefix%command <command>",
-    exec: async(killua, m, { quoted, text }) => {
+    exec: async(dinxyz, m, { quoted, text }) => {
         if (!quoted.msg.fileSha256) return m.reply('Sha256 Hash Missing')
         let hash = quoted.msg.fileSha256.toString("hex")
         if (global.db.sticker[hash] && global.db.sticker[hash].locked) return m.reply('You have no permission to change this sticker command')

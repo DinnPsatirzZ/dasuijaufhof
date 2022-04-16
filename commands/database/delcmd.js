@@ -4,7 +4,7 @@ module.exports = {
     desc: "Delete Command With Media From Database",
     type: "database",
     example: "Reply Media With Command %prefix%command <command>",
-    exec: async(killua, m, { quoted, prefix }) => {
+    exec: async(dinxyz, m, { quoted, prefix }) => {
         let hash = quoted.msg.fileSha256.toString("hex")
         if (!hash) return m.reply("No Hash Result")
         if (!(hash in global.db.sticker)) return m.reply(`Hash Not Found On Database, See List Of Commands in ${prefix}listcmd`)

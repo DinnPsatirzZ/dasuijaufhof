@@ -6,7 +6,7 @@ module.exports = {
     desc: "Add Message to Datbase",
     type: "database",
     example: "Reply or send message with caption %prefix%command <name>",
-    exec: async(killua, m, { prefix, command, text, quoted }) => {
+    exec: async(dinxyz, m, { prefix, command, text, quoted }) => {
         let M = proto.WebMessageInfo
         let which = command.replace(/\+|add/i, '')
         let database = global.db.database

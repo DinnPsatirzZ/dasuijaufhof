@@ -1,5 +1,5 @@
 {
-  "name": "killua-zoldyck",
+  "name": "psatir-botv13",
   "version": "1.0.0",
   "description": "WhatsApp Bot Using Lib Baileys",
   "main": "index.js",
@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhwzein/Killua-Zoldyck.git"
+    "url": "git+https://github.com/DinXZY/Psatir-BotV13.git"
   },
   "keywords": [
     "bot",

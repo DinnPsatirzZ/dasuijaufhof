@@ -6,7 +6,7 @@ module.exports = {
     desc: "Download Media From https://twitter.com",
     type: "downloader",
     example: "Example : %prefix%command https://twitter.com/i/status/1463482301136789509",
-    exec: async(killua, m, { prefix, command, text }) => {
+    exec: async(dinxyz, m, { prefix, command, text }) => {
         global.mess("wait", m)
         let fetch = await fetchUrl(global.api("zenz", "/downloader/twitter", { url: isUrl(text)[0] }, "apikey"))
         if (fetch.result.length == 0) return global.mess("error", m)
@@ -20,8 +20,8 @@ module.exports = {
             buttons: buttons,
             headerType: 4
         }
-        killua.sendMessage(m.from, buttonMessage, { quoted: m })
-        killua.sendFile(m.from, fetch.result.audio, "", m)
+        dinxyz.sendMessage(m.from, buttonMessage, { quoted: m })
+        dinxyz.sendFile(m.from, fetch.result.audio, "", m)
     },
     isQuery: true
 }

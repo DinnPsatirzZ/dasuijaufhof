@@ -6,7 +6,7 @@ module.exports = {
     desc: "Search story From wattpad",
     type: "webzone",
     example: `Example : %prefix%command love`,
-    exec: async(killua, m, { text, command, prefix, toUpper }) => {
+    exec: async(dinxyz, m, { text, command, prefix, toUpper }) => {
         global.mess("wait", m)
         let fetch = await fetchUrl(global.api("zenz", "/webzone/wattpad", { query: text }, "apikey"))
         if (fetch.result.length == 0) return global.mess("error", m)
@@ -21,7 +21,7 @@ module.exports = {
             caption += `⭔ Thumb : ${i.thumb}\n`
             caption += `⭔ Description : ${i.description}\n\n`
         }
-        killua.sendFile(m.from, fetch.result[0].thumb, "", m, { caption })
+        dinxyz.sendFile(m.from, fetch.result[0].thumb, "", m, { caption })
     },
     isQuery: true
 }

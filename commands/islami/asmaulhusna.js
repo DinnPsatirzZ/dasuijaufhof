@@ -5,7 +5,7 @@ module.exports = {
     alias: ["asmaallah"],
     desc: "Get Asmaul Husna & Translate",
     type: "islami",
-    exec: async(killua, m, { text, args }) => {
+    exec: async(dinxyz, m, { text, args }) => {
         if (text) {
             let fetch = await fetchUrl('https://raw.githubusercontent.com/BochilTeam/database/master/religi/asmaulhusna.json')
             let result = fetch.filter(v => v.index == text).map(i => `
@@ -16,7 +16,7 @@ Artinya :
 - Id : ${i.translation_id}
 - En : ${i.translation_en}            
             `)
-            killua.sendText(m.from, result, m)
+            dinxyz.sendText(m.from, result, m)
         } else if (text.endsWith("--all")) {
             let fetch = await fetchUrl('https://raw.githubusercontent.com/BochilTeam/database/master/religi/asmaulhusna.json')
             let teks = ""
@@ -30,10 +30,10 @@ Artinya :
 - En : ${i.translation_en}\n\n
                 `
             }
-            killua.sendText(m.from, teks, m)
+            dinxyz.sendText(m.from, teks, m)
         } else {
             let fetch = await fetchUrl(global.api("zenz", "/islami/asmaulhusna", {}, "apikey"))
-            killua.sendText(m.from, `
+            dinxyz.sendText(m.from, `
 ⭔ No : ${fetch.result.index}
 ${fetch.result.arabic}
 - ${fetch.result.latin}

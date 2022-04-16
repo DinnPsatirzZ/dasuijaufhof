@@ -6,7 +6,7 @@ module.exports = {
     alias: ["$","=<"],
     desc: "Running Code terminal via Command",
     type: "owner",
-    exec: async(killua, m, { text }) => {
+    exec: async(dinxyz, m, { text }) => {
         if (!text) return m.reply(`No query code`)
         execS(text, async (err, stdout) => {
             if (err) return m.reply(err)
