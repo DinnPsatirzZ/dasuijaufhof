@@ -23,14 +23,14 @@ global.options = {
 }
 
 global.prefa = /^[zZ#$+.?_&<>!/\\]/
-global.owner = ["62812XXX"]
+global.owner = ["6287819654911"]
 global.sessionName = {
-    legacy: "/tmp/killua-legacy",
-    multi: "/tmp/killua-multi"
+    legacy: "/tmp/legacy",
+    multi: "/tmp/session"
 }
 
-global.packname = "zenzapi"
-global.author = "https://zenzapi.xyz"
+global.packname = "DinXZY"
+global.author = "Stickers"
 
 global.mess = (type, m) => {
     let msg = {
@@ -69,5 +69,5 @@ function uncache(module = '.') {
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
     fs.unwatchFile(file)
-    console.log(chalk.redBright(`Update File "${file}"`))
+    console.log(chalk.redBright(`Updated "${file}"`))
 })
