@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.pinimg.com/736x/ff/87/b7/ff87b70e9c9dea4d9ca32c9538a81c3b.jpg" alt="nz" width="350"/>
+<img src="https://i.pinimg.com/736x/ff/87/b7/ff87b70e9c9dea4d9ca32c9538a81c3b.jpg" alt="nz" width="200"/>
 </p>
 
 ## Killua-Zoldyck
@@ -12,10 +12,11 @@
 
 </br>
 
-<a href="https://github.com/zhwzein"><img title="Author" src="https://img.shields.io/badge/Author-Zhwzein-blue.svg?color=54aeff&style=for-the-badge&logo=github" /></a>  
-<a href="https://github.com/zhwzein/Killua-Zoldyck"><img title="Stars" src="https://img.shields.io/github/stars/zhwzein/Killua-Zoldyck?color=54aeff&style=flat-square" /></a>
-<a href="https://github.com/zhwzein/Killua-Zoldyck/network/members"><img title="Forks" src="https://img.shields.io/github/forks/zhwzein/Killua-Zoldyck?color=54aeff&style=flat-square" /></a>
-<a href="https://github.com/zhwzein/Killua-Zoldyck/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/zhwzein/Killua-Zoldyck?label=watchers&color=54aeff&style=flat-square" /></a> <br>
+<a href="https://github.com/zhwzein"><img title="Author" src="https://img.shields.io/badge/Author-DinXZY-blue.svg?color=54aeff&style=for-the-badge&logo=github" /> 
+	
+<img title="Stars" src="https://img.shields.io/github/stars/zhwzein/Killua-Zoldyck?color=54aeff&style=flat-square" />
+<img title="Forks" src="https://img.shields.io/github/forks/zhwzein/Killua-Zoldyck?color=54aeff&style=flat-square" />
+<img title="Watching" src="https://img.shields.io/github/watchers/zhwzein/Killua-Zoldyck?label=watchers&color=54aeff&style=flat-square" /></a> <br>
 
 ---
 
@@ -34,8 +35,8 @@ Add FFmpeg to PATH environment variable
 <!-- Installation -->
 <b><details><summary>Installation</summary></b>
 ```bash
-> git clone https://github.com/zhwzein/Killua-Zoldyck
-> cd Killua-Zoldyck
+> git clone https://github.com/DinXZY/Psatir-BotV13
+> cd Psatir-BotV13
 > npm install
 ```
 </details>
@@ -108,6 +109,7 @@ SCAN THE QR USING YOUR WHATSAPP!
 * [`Mhankbarbar`](https://github.com/MhankBarBar)
 * [`DikaArdnt`](https://github.com/DikaArdnt)
 * [`Faizbastomi`](https://github.com/FaizBastomi)
+* [`Zhwzein`](https://github.com/zhwzein)
 
 
 License: [MIT](https://en.wikipedia.org/wiki/MIT_License)
