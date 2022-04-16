@@ -149,7 +149,7 @@ module.exports = async (killua, m, commands, chatUpdate) => {
 
         try {
             cmd.exec(killua, m, {
-                name: 'killua Zoldyck',
+                name: 'Test',
                 metadata,
                 pushName: pushname,
                 participants,
